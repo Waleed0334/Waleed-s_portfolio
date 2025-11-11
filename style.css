@@ -529,8 +529,6 @@ footer {
     
     flex-direction: row; 
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
     gap: 10px;
   }
 
@@ -586,4 +584,5 @@ footer {
   .hero-content p {
     font-size: 17px;
   }
+
 }
