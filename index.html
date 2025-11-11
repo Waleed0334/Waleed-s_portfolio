@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Waleed | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1 class="logo">MR. Waleed Ahmed Siddiqui</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact-info">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section with Dynamic Text -->
+  <section id="home" class="hero">
+    <!-- Note: Image source is local and may not display in all environments -->
+    <img src="\waleed ahmed.jpg" alt="Waleed Ahmed" class="profile-pic"> 
+    <div class="hero-content">
+      <!-- 
+        *** DYNAMIC TEXT IMPLEMENTATION ***
+        The <span> element with id="changing-role" will automatically cycle through roles.
+      -->
+      <h2>Hi, I'm <span id="changing-role">Waleed</span></h2>
+      <p>An 18-year-old Data Science student at FAST and a passionate<br> 
+        Front-End Developer dedicated to creating responsive and user-friendly <br>web 
+        experiences.</p>
+      <button onclick="scrollToSection('projects')">View My Work</button>
+      <button onclick="scrollToSection('contact-form')">Hire Me</button>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+<section id="about">
+  <div class="about-container">
+    <h2>About Me</h2>
+    <p>
+      I am Waleed Ahmed , an 18-year-old Data Science undergraduate at FAST (NUCES) 
+      with a strong passion for front-end development. I specialize in creating 
+      responsive and visually engaging web interfaces using HTML, CSS, and JavaScript.
+      I aim to combine design and technology to build efficient, user-centered
+      digital experiences while continuously expanding my technical and creative skills.
+    </p>
+  </div>
+</section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <h3 class="skill-category">Front-End</h3>
+    <div class="skills-container">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+    </div>
+    <hr>
+    <h3 class="skill-category">Programming</h3>
+    <div class="skills-container">
+      <div class="skill">C Programming</div>
+      <div class="skill">Python</div>
+    </div>
+    <hr>
+    <h3 class="skill-category">Mathematics & Data</h3>
+    <div class="skills-container">
+      <div class="skill">Mathematics</div>
+      <div class="skill">Data Science</div>
+    </div>
+    <hr>
+    <h3 class="skill-category">Other Skills</h3>
+    <div class="skills-container">
+      <div class="skill">Cricket</div>
+      <div class="skill">Gaming</div>
+    </div>
+    <hr>
+    <h3 class="skill-category">Find Me On</h3>
+    <div class="social-icons">
+      <a href="https://github.com/Waleed0334" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="social-icon">
+      </a>
+      <a href="https://www.facebook.com/waleedahmed.siddiqui.7" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon">
+      </a>
+      <a href="https://www.instagram.com/waleed_ahmed_siddiqui_/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-icon">
+      </a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <a href="https://github.com/Waleed0334/Election-System.git" class="project-card" target="_blank">
+        <img src="https://t4.ftcdn.net/jpg/07/55/20/95/360_F_755209501_KcznmUSRDSkV5QbvScnZZF4gQOXq0tgL.jpg" alt="Election System Project" class="project-image">
+        <div class="project-text">
+            <h3>ELECTION SYSTEM</h3>
+            <p>Program made up of C language for handling election.</p>
+        </div>
+      </a>
+
+      <a href="#" class="project-card" target="_blank">
+        <!-- Note: Image source is local and may not display in all environments -->
+        <img src="waleed2.png" alt="Portfolio Website Project" class="project-image"> 
+        <div class="project-text">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio showcasing my skills and projects.</p>
+        </div>
+      </a>
+        
+      <a href="https://github.com/Waleed0334/HTML-CSS_PROJECT.git" class="project-card" target="_blank">
+        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/is_web_development_good_career.jpg" alt="Imtiaz Website Project" class="project-image">
+        <div class="project-text">
+            <h3>IMTIAZ WEBSITE</h3>
+            <p>Website front-end made with HTML, CSS, and JavaScript.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-container">
+      <div class="education-card">
+        <h3>2025-2029</h3>
+        <p><strong> UNDER GRADUATE</strong></p>
+        <p><em>FAST NATIONAL UNIVERSITY OF COMPUTING AND EMERGING SCIENCES</em></p>
+        <p>Grade: N/A</p>
+      </div>
+
+      <div class="education-card">
+        <h3>2023-2025</h3>
+        <p><strong>INTERMEDIATE</strong></p>
+        <p><em>GOVT. DEHLI COLLEGE</em></p>
+        <p>Grade: A [78.81]</p>
+      </div>
+
+      <div class="education-card">
+        <h3>2021-2023</h3>
+        <p><strong>MATRIC</strong></p>
+        <p><em>THE EDUCATORS SCHOOL</em></p>
+        <p>Grade: A+ [86.45]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact-info">
+    <h2>Contact Me</h2>
+    <p>Below are the details to reach out to me!</p>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <h4><img
+            src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+            alt="WhatsApp"
+            class="contact-icon"/>
+            WhatsApp</h4>
+        <p><a href="https://wa.me/923342912466" target="_blank">+92 334 2912466</a></p>
+      </div>
+      <div class="contact-card">
+        <h4><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAJnm_YAR3xAZ-JCa8YN7dkw4yadGkBjteDA&s"
+            alt="WhatsApp"
+            class="contact-icon"/>
+            Contact Number</h4>
+        <p><a href="tel:+923342912466">+92 334 2912466</a></p>
+      </div>
+      <div class="contact-card">
+        <h4><img
+            src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+            alt="Email"
+            class="contact-icon"
+          />
+          Email Address</h4>
+        <p><a href="mailto:k252517@gmail.com">k252517@gmail.com</a></p>
+      </div>
+      <div class="contact-card">
+        <h4><img
+            src="https://www.citypng.com/public/uploads/preview/hd-linkedin-square-black-icon-transparent-background-7017516949739946gsykkwdmd.png"
+            alt="Linked in"
+            class="contact-icon"
+          />
+          LinkedIn</h4>
+        <p><a href="https://www.linkedin.com/in/waleed" target="_blank">linkedin.com/in/waleed</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Send Message Box -->
+  <div class="message-box">
+  <h3>Send Me a Message on WhatsApp</h3>
+  <form id="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message..." rows="4" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <div id="form-status"></div>
+</div>
+
+  <!-- Footer -->
+  <footer>
+    Waleed Ahmed Siddiqui // Pakistan, Karachi
+  </footer>
+
+  <!--JavaScript-->
+  <script src="script.js"></script>
+
+
+</body>
+</html>
