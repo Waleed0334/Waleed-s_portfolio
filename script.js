@@ -14,7 +14,7 @@ contactForm.addEventListener("submit", function(event) {
   event.preventDefault(); 
 
   // alert when message is sent
-  alert("Are You Sure");
+  alert("Are You Sure to send message!");
 
   // Display success message in the page
   formStatus.textContent = "✅ Message submitted! ";
@@ -56,3 +56,4 @@ function changeRoleText() {
 
 // Start text animation loop
 setInterval(changeRoleText, 3500);
+
