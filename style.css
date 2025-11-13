@@ -451,117 +451,57 @@ footer {
   }
 }
 
-/* ===== Contact Message Box (Upgraded) ===== */
-.message-box {
-  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
-  color: #fff;
-  padding: 50px 40px;
-  margin: 60px auto;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 180, 0, 0.4),
-              inset 0 0 10px rgba(255, 180, 0, 0.2);
-  max-width: 650px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* ===== Contact Message Box ===== */
+.message-box { 
+  background: #111; 
+  color: white; 
+  padding: 40px; 
+  margin-top: 50px; 
+  border-radius: 15px; 
+  box-shadow: 0 0 15px rgba(255, 180, 0, 0.6); 
+  max-width: 600px; margin-left: auto; margin-right: auto; 
 }
-
-.message-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(255, 180, 0, 0.6);
-}
-
-.message-box h3 {
+.message-box h3 { 
   color: #ffb400;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 25px;
-  text-align: center;
-  letter-spacing: 1px;
+                                                                                                                                                                 
+  margin-bottom: 20px; 
+  font-size: 26px;
 }
-
-/* ===== Form Layout ===== */
-#contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+#contact-form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
 }
-
-/* ===== Inputs & Textarea ===== */
-#contact-form input,
-#contact-form textarea {
-  padding: 14px 16px;
-  border: 1px solid #333;
-  border-radius: 10px;
-  background: #1b1b1b;
-  color: #fff;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  resize: none;
-}
-
-#contact-form input::placeholder,
-#contact-form textarea::placeholder {
-  color: #aaa;
-}
-
-#contact-form input:focus,
-#contact-form textarea:focus {
-  background: #222;
-  border-color: #ffb400;
-  box-shadow: 0 0 10px rgba(255, 180, 0, 0.6);
-}
-
-/* ===== Submit Button ===== */
-#contact-form button {
-  background: linear-gradient(90deg, #ffb400, #ffcb42);
+#contact-form input,#contact-form textarea {
+  padding: 12px 15px;
   border: none;
-  padding: 14px;
-  color: #111;
-  font-size: 17px;
-  font-weight: 700;
-  border-radius: 10px;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+#contact-form input:focus, #contact-form textarea:focus { 
+  background: #333;
+  box-shadow: 0 0 8px #ffb400; 
+} #contact-form button { 
+  background: #ffb400; 
+  border: none; 
+  padding: 12px;
+  color: black; 
+  font-size: 16px; 
+  font-weight: bold;
+  border-radius: 8px; 
   cursor: pointer;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-}
-
-#contact-form button:hover {
+  transition: 0.3s; 
+} #contact-form button:hover {
   background: white;
-  color: #000;
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-/* ===== Form Status Message ===== */
-#form-status {
-  margin-top: 12px;
-  text-align: center;
+  color: #111;
+} #form-status {
+  margin-top: 10px;
   color: #ffb400;
   font-weight: 600;
-  font-size: 15px;
-  min-height: 20px;
 }
-
-/* ===== Responsive Design ===== */
-@media (max-width: 600px) {
-  .message-box {
-    padding: 35px 25px;
-    margin: 40px 20px;
-  }
-
-  .message-box h3 {
-    font-size: 24px;
-  }
-
-  #contact-form input,
-  #contact-form textarea {
-    font-size: 15px;
-  }
-
-  #contact-form button {
-    font-size: 16px;
-  }
-}
-
 
 /* ===== Media Queries (Responsive) ===== */
 
@@ -633,4 +573,5 @@ footer {
   }
 
 }
+
 
