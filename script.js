@@ -1,589 +1,74 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  color: #333;
-  background: #f5f5f5;
-  scroll-behavior: smooth;
-}
-
-
-/* ===== Navbar ===== */
-header {
-  background: #222;
-  padding: 15px 50px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.logo {
-  color: #fff;
-  font-size: 24px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav ul li a:hover {
-  color: #ffb400;
-}
-
-/* ===== Hero Section ===== */
-.hero {
-  background: linear-gradient(to right, #ffb400, #ff6b00);
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  padding: 100px 20px 50px 20px;
-}
-/* Hero section dynamic background */
-.hero {
-  position: relative; 
-  background: linear-gradient(-45deg, #ffb400, #ff6b00, #00bcd4, #ff4081);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
-.hero-content h2 {
-  font-size: 50px;
-  margin-top: 20px;
-  opacity: 0;
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0.5s;
-}
-
-/* New Styles for Dynamic Text Animation */
-.hero-content h2 #changing-role {
-    /* Changing text color to stand out */
-    color: #222; 
-    /* Set up for the animation */
-    display: inline-block;
-    opacity: 1;
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-/* Fading effects for the JavaScript transition */
-.fade-out {
-    opacity: 0 !important;
-    transform: translateY(-10px);
-}
-.fade-in {
-    opacity: 1 !important;
-    transform: translateY(0);
-}
-/* End of New Styles */
-
-
-.hero-content p {
-  font-size: 18px;
-  margin-top: 10px;
-  opacity: 0;
-  animation: fadeInUp 1s forwards;
-  animation-delay: 1s;
-}
-
-.hero-content button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  background: #222;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 5px;
-  opacity: 0;
-  animation: fadeInUp 1s forwards;
-  animation-delay: 1.5s;
-}
-
-.hero-content button:hover {
-  background: #fff;
-  color: #222;
-}
-
-/* Circular Profile Image */
-.profile-pic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0s;
-}
-
-/* ===== About Section ===== */
-.about-container {
-  max-width: 900px;
-  margin: 0 auto;
-  background: #f18b1d;
-  padding: 40px 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-.about-container h2 {
-  text-align: center;
-  color: #050404;
-  margin-bottom: 20px;
-}
-
-.about-container p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #333;
-}
-
-/* ===== Sections ===== */
-section {
-  padding: 100px 50px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-/* ===== Skills Section ===== */
-.skill-category {
-  font-size: 24px;
-  margin: 30px 0 15px 0;
-  color: #222;
-  font-weight: 700;
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  background: #ffb400;
-  margin: 20px auto;
-  width: 60%;
-}
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.skill {
-  background: #ffb400;
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 30px;
-  font-weight: 500;
-}
-
-/* Social Icons */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.social-icon {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s;
-}
-
-.social-icon:hover {
-  transform: scale(1.2);
-}/* ===== Projects ===== */
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.project-card {
-  display: block;
-  position: relative; 
-  text-decoration: none;
-  color: black;
-  background: #fff;
-  width: 250px;
-  height: 250px;
-  overflow: hidden; 
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
-  transition: transform 0.4s ease, box-shadow 0.4s ease; 
-  cursor: pointer;
-  z-index: 1; 
-}
-
-.project-card:before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(60deg, #ffb400, #ff6b00, #00bcd4, #ff4081); 
-    background-size: 200% 200%;
-    opacity: 0;
-    transition: opacity 0.5s, transform 0.5s;
-    z-index: -1;
-}
-
-.project-card:hover:before {
-    opacity: 0.1; 
-    transform: rotate(5deg);
-}
-
-
-.project-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 10px 30px rgba(255, 180, 0, 0.6); 
-}
-
-/* Style for the project image */
-.project-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  transition: opacity 0.3s;
-}
-
-/* Style for the text overlay */
-.project-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.9); 
-  color: white; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0; 
-  transition: opacity 0.4s ease;
-}
-
-.project-text h3 {
-    margin-bottom: 10px;
-    color: #ffb400; 
-}
-
-.project-text p {
-    color: #eee;
-}
-
-/* HOVER EFFECT: Hide image and show text */
-.project-card:hover .project-image {
-  opacity: 0;
-}
-
-.project-card:hover .project-text {
-  opacity: 1;
-}
-/* ===== Contact Section ===== */
-#contact-info {
-  background: #000;
-  color: white;
-  padding: 60px 50px;
-  text-align: center;
-}
-
-#contact-info h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-  font-weight: 900;
-}
-
-#contact-info p {
-  color: #bbb;
-  margin-bottom: 40px;
-  font-size: 16px;
-}
-
-/* Contact Cards */
-.contact-cards {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.contact-card {
-  background: #222;
-  border-radius: 12px;
-  padding: 30px 40px;
-  width: 220px;
-  box-shadow: 0 0 8px rgba(255, 180, 0, 0.5);
-  transition: 0.3s;
-  cursor: default;
-}
-
-.contact-card:hover {
-  background: #ffb400;
-  color: black;
-  box-shadow: 0 0 20px #ffb400;
-}
-
-.contact-card h4 {
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.contact-card p {
-  font-size: 14px;
-  word-wrap: break-word;
-}
-
-.contact-card a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.contact-card a:hover {
-  color: black;
-  text-decoration: underline;
-}
-
-.contact-icon {
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
-/* ===== Education Cards ===== */
-.education-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.education-card {
-  background: #222;
-  color: white;
-  padding: 20px;
-  width: 280px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255, 180, 0, 0.7);
-  transition: transform 0.3s, background 0.3s;
-}
-
-.education-card:hover {
-  transform: translateY(-5px);
-  background: #ffb400;
-  color: black;
-}
-
-.education-card h3 {
-  color: #ffb400;
-  margin-bottom: 10px;
-}
-
-.education-card p {
-  margin-bottom: 8px;
-}
-
-/* ===== Footer ===== */
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 50px;
-}
-
-/* ===== Animations ===== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+// Smooth scroll to section
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
   }
 }
 
-/* ===== Contact Message Box ===== */
-.message-box {
-  background: #111;
-  color: white;
-  padding: 40px;
-  margin-top: 50px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255, 180, 0, 0.6);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+// Handle contact form submit
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
 
-.message-box h3 {
-  color: #ffb400;
-  margin-bottom: 20px;
-  font-size: 26px;
-}
+contactForm.addEventListener("submit", async function(event) {
+  event.preventDefault();
 
-#contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+  const name = contactForm.querySelector('input[type="text"]').value.trim();
+  const email = contactForm.querySelector('input[type="email"]').value.trim();
+  const message = contactForm.querySelector('textarea').value.trim();
 
-#contact-form input,
-#contact-form textarea {
-  padding: 12px 15px;
-  border: none;
-  border-radius: 8px;
-  background: #222;
-  color: white;
-  font-size: 16px;
-  outline: none;
-}
+  const data = { name, email, message };
 
-#contact-form input:focus,
-#contact-form textarea:focus {
-  background: #333;
-  box-shadow: 0 0 8px #ffb400;
-}
+  formStatus.textContent = "⏳ Sending...";
+  formStatus.style.color = "orange";
 
-#contact-form button {
-  background: #ffb400;
-  border: none;
-  padding: 12px;
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+  try {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbw0QSzQMnS6Dvv3qIfQeojcikW6Y23cQlZaS5kFNKLjca5nEaKTTqhd8biqy2hK72mp/execRE", {
+      method: "POST",
+      mode: "no-cors", // important
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
 
-#contact-form button:hover {
-  background: white;
-  color: #111;
-}
-
-#form-status {
-  margin-top: 10px;
-  color: #ffb400;
-  font-weight: 600;
-}
-
-/* ===== Media Queries (Responsive) ===== */
-
-/* Mobile (max-width 768px) */
-@media (max-width: 768px) {
-
-  header {
-    padding: 15px 20px;
+    formStatus.textContent = "✅ Message sent successfully!";
+    formStatus.style.color = "#25D366";
+    contactForm.reset();
+  } catch (error) {
+    formStatus.textContent = "❌ Error sending message. Try again!";
+    formStatus.style.color = "red";
   }
+});
 
-  nav ul {
+//change name of mine
+const changingTextElement = document.getElementById('changing-role');
+
+const roles = [
+    "Data Scientist",
+    "Web Developer",
+    "C programmer",
+    "Waleed"
+];
+
+let roleIndex = 0;
+
+function changeRoleText() {
+    changingTextElement.classList.add('fade-out');
     
-    flex-direction: row; 
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
+    setTimeout(() => {
+        
+        changingTextElement.textContent = roles[roleIndex];
 
-  .hero-content h2 {
-    font-size: 30px;
-  }
+        changingTextElement.classList.remove('fade-out');
+        changingTextElement.classList.add('fade-in');
+        
+        roleIndex = (roleIndex + 1) % roles.length;
 
-  .hero-content p {
-    font-size: 16px;
-  }
-
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-  }
-
-  .about-container {
-    padding: 20px 15px;
-  }
-
-  section {
-    padding: 80px 20px;
-  }
-
-  .skills-container, .projects-container, .education-container, .contact-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-card, .education-card, .contact-card {
-    width: 90%;
-  }
-
-  #contact-info {
-    padding: 40px 20px;
-  }
-
-  .message-box {
-    padding: 20px;
-  }
+        setTimeout(() => {
+            changingTextElement.classList.remove('fade-in');
+        }, 400); 
+    }, 400);
 }
 
-/* Tablet (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .project-card, .education-card, .contact-card {
-    width: 45%;
-  }
+// Start text animation loop
+setInterval(changeRoleText, 3500);
 
-  .hero-content h2 {
-    font-size: 40px;
-  }
-
-  .hero-content p {
-    font-size: 17px;
-  }
-}
