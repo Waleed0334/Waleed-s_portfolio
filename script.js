@@ -6,39 +6,24 @@ function scrollToSection(sectionId) {
   }
 }
 
-// Handle contact form submit
+// "Send Message" button Handler
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 
-contactForm.addEventListener("submit", async function(event) {
-  event.preventDefault();
+contactForm.addEventListener("submit", function(event) {
+  event.preventDefault(); 
 
-  const name = contactForm.querySelector('input[type="text"]').value.trim();
-  const email = contactForm.querySelector('input[type="email"]').value.trim();
-  const message = contactForm.querySelector('textarea').value.trim();
+  // alert when message is sent
+  alert("Are You Sure");
 
-  const data = { name, email, message };
+  // Display success message in the page
+  formStatus.textContent = "✅ Message submitted! ";
+  formStatus.style.color = "#25D366";
+  formStatus.style.opacity = "1";
 
-  formStatus.textContent = "⏳ Sending...";
-  formStatus.style.color = "orange";
-
-  try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbw0QSzQMnS6Dvv3qIfQeojcikW6Y23cQlZaS5kFNKLjca5nEaKTTqhd8biqy2hK72mp/execRE", {
-      method: "POST",
-      mode: "no-cors", // important
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
-
-    formStatus.textContent = "✅ Message sent successfully!";
-    formStatus.style.color = "#25D366";
-    contactForm.reset();
-  } catch (error) {
-    formStatus.textContent = "❌ Error sending message. Try again!";
-    formStatus.style.color = "red";
-  }
+  // Reset the form
+  contactForm.reset();
 });
-
 //change name of mine
 const changingTextElement = document.getElementById('changing-role');
 
@@ -71,4 +56,3 @@ function changeRoleText() {
 
 // Start text animation loop
 setInterval(changeRoleText, 3500);
-
