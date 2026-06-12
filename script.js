@@ -62,5 +62,12 @@ function sendMail(){
     from_name : document.getElementById("from_name").value,
     email_id : document.getElementById("email_id").value,
     message : document.getElementById("message").value }
-    emailjs.send("service_sr7habh", "template_tiaclv9", params).then(alert("Your message has been sent successfully!"))
+    emailjs.send("service_sr7habh", "template_tiaclv9", params)
+.then(function(response) {
+    alert("Your message has been sent successfully!");
+})
+.catch(function(error) {
+    alert("Failed to send message.");
+    console.log(error);
+});
 }
