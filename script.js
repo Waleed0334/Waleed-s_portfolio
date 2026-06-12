@@ -57,3 +57,10 @@ function changeRoleText() {
 // Start text animation loop
 setInterval(changeRoleText, 3500);
 
+function sendMail(){
+  let params = {
+    from_name : document.getElementById("from_name").value,
+    email_id : document.getElementById("email_id").value,
+    message : document.getElementById("message").value }
+    emailjs.send("service_sr7habh", "template_tiaclv9", params).then(alert("Your message has been sent successfully!"))
+}
