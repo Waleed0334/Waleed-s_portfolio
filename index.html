@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Waleed | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "OAtulKSxufXw_sF1M",
+      });
+   })();
+  </script>
 </head>
 
 <body>
@@ -205,7 +215,7 @@
     <input type="text" placeholder="Your Name" required>
     <input type="email" placeholder="Your Email" required>
     <textarea placeholder="Your Message..." rows="4" required></textarea>
-    <button type="submit">Send Message</button>
+    <button type="submit" onclick="sendMail()">Send Message</button>
   </form>
   <div id="form-status"></div>
 </div>
