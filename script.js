@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formStatus.style.color = "#007bff";
 
         emailjs.send(
+            
             "service_sr7habh",
             "template_tiaclv9",
             params
